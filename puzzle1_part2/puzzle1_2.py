@@ -33,13 +33,29 @@ def read_values(filename):
                 current_value += char
     return a, b
 
-a,b = read_values("puzzle2_input.txt")
+a,b = read_values(r"puzzle1_part2\puzzle1_input.txt")
 a = list(map(int, a))
 b = list(map(int, b))
 
-for i in len(a): 
-    if a[i] in b:
-        count= 
+def counter(b):
+    count = {}
+    for i in b:
+        if i in count.keys():
+            count[i]+= 1
+        else:
+            count[i] = 1
+    return count
+
+b_count = counter(b)
+
+total=0
+for i in a:
+    try:
+        total = total + (i*b_count[i])
+    except:
+        pass
+
+print(total)
 # with open("final.txt", "w", encoding="utf-8") as output_file:
 #     output_file.write(f"{'A':<10} {'B':<10} {'A Sorted':<10} {'B Sorted':<10} {'Difference':<10} {'Cumulative':<10}\n")
 #     output_file.write("-" * 70 + "\n")
