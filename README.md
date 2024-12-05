@@ -1,1 +1,1 @@
-Bu repo advent of code 2024 challange için açılmıştır ;)
+Bu repo advent of code 2024 challenge için açılmıştır ;)
