@@ -1,7 +1,7 @@
 import copy
 
 # Open the input file and read all lines
-with open("puzzle2/input.txt") as reports:
+with open("puzzle2/puzzle2_input.txt") as reports:
     lines = reports.readlines()
 
 def check_is_monotonic(arr):
